@@ -1,0 +1,3 @@
+how does the breach checker work? ( i dont have a API key so i have changed to to a Mock-up)
+
+

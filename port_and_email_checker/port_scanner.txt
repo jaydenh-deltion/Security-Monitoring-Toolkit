@@ -1,0 +1,21 @@
+import socket: Important library for network communication. It allows the script to connect with other computers and itself (127.0.0.1).
+
+import threading: This allows Python to multitask, so it can scan multiple ports at the same time.
+
+The scan_port function:
+
+socket.AF_INET & socket.SOCK_STREAM: Tells the computer to use the IPv4 protocol and TCP (connection-based) communication.
+
+s.settimeout(0.5): Tells the script to wait a maximum of 0.5 seconds for an answer. If the port does not react, I assume it is closed. Without this, the script might wait forever if a port is not responding.
+
+result = s.connect_ex(): Tests the connection. If the result is 0, the connection is successful and the port is open. Any other number means it is closed or protected.
+
+open_ports.append(port): If the port is open, it saves the port number in this list.
+
+The Execution Loops:
+
+for port in range(1, 500): This creates 499 threads. Every thread has a specific port number to check.
+
+thread.join(): This forces the main program to wait for all the threads to be finished before moving on to the final result.
+
+The print function: Displays the final results, showing the open_ports list.
