@@ -12,7 +12,7 @@ def check_email_breach(email): # Function to check if an email has been involved
 
     headers ={
         "User-Agent": "Sentine-Security-Toolkit", # Custom user agent
-        "hibp-api-key": "your_api_key_here"  #hear comes the API key i dont have one 
+        "hibp-api-key": "your_api_key_here"  #hear comes the API key (i dont have one)
     }
 
     try: 
