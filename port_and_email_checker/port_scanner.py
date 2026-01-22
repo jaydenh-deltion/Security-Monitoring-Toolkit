@@ -1,5 +1,6 @@
 import socket # Importing the socket module to create network connections
 import threading # Importing the threading module to handle multiple threads
+import matplotlib.pyplot as plt # Importing matplotlib for potential future use (not used in this snippet)
 
 open_ports = [] # List to store open ports
 
@@ -17,22 +18,17 @@ def scan_port(ip, port):
     except:
         pass
 
-target = "127.0.0.1"
-print(f"Start Scanning target: {target}")
+def show_port_chart(total_scanned):
+    open_count = len(open_ports)
+    closed_count = total_scanned - open_count
 
-threads = []
+    labels = [f'Open({open_count})', f'Closed/Filterd({closed_count})']
+    sizes = [open_count, closed_count]
+    colors = ['#ff4444', '#66b3ff']
 
-# STAP 1: Start alle threads (deze loop gaat heel snel)
-for port in range(1, 500):
-    thread = threading.Thread(target=scan_port, args=(target, port))
-    threads.append(thread)
-    thread.start()
+    plt.figure(figsize=(7, 7))
+    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=colors, explode=(0.1, 0))
+    plt.title(f'Security Scan Results\nTarget: Ports 1-{total_scanned}')
 
-# STAP 2: Wacht tot alle threads klaar zijn (BELANGRIJK: NIET INGESPRONGEN)
-for thread in threads:
-    thread.join()
-
-# STAP 3: Print de einduitslag (slechts één keer!)
-print("_" * 30)
-print(f"Scan voltooid op {target}. Open poorten: {open_ports}")
-print("_" * 30)
+    print("[*] Dashboard: Generating visual report...")
+    plt.show()
