@@ -26,6 +26,5 @@ PORT_SCANNER/
 ├── main.py                     # Central dashboard and menu logic
 ├── README.md                   # Project documentation
 └── port_and_email_checker/     # Core engine package
-    ├── __init__.py             # Package initializer
     ├── port_scanner.py         # Port scanning and visualization logic
     └── email_checker.py        # Breach detection logic via XposedOrNot API
