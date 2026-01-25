@@ -4,6 +4,7 @@ import threading
 
 from systems.port_scanner import scan_port, open_ports, show_port_chart
 from systems.email_checker import check_email_breach
+from systems.system_health import get_system_health
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear') # Clear terminal screen
@@ -18,10 +19,11 @@ def main():
         print(" [1] Network Security: Port Scanner")
         print(" [2] Data Integrity: Breach Checker (XposedOrNot)")
         print(" [3] System Information")
-        print(" [4] Exit")
+        print(" [4] System Health Check")
+        print(" [5] Exit")
         print("="*45)
 
-        choice = input("Select an option (1-4): ")
+        choice = input("Select an option (1-5): ")
 
         if choice == '1':
             target = input("\n Enter target IP address:")
@@ -55,8 +57,12 @@ def main():
             print(f"[*] Operating System: {os.name}")
             print(f"[*] Python version: {sys.version.split()[0]}")
             input("\n Press Enter to return to the menu...")
-        
+
         elif choice == '4':
+            get_system_health()
+            input("\n Press Enter to return to the menu...")
+        
+        elif choice == '5':
             print("\n Exiting the program. Goodbye!")
             break
             
