@@ -23,7 +23,7 @@ def check_email_breach(email):
             print(f"\n [!] WAARSCHUWING: Dataleaks gevonden voor {email}:")
             for breach in breaches: 
                 
-                print(f"     - Gevonden in: {breach}")
+                print(f"- Gevonden in: {breach}")
 
         
         elif response.status_code == 404:

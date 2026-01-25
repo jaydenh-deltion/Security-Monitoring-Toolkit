@@ -2,8 +2,8 @@ import sys
 import os 
 import threading
 
-from port_and_email_checker.port_scanner import scan_port, open_ports, show_port_chart
-from port_and_email_checker.email_checker import check_email_breach
+from systems.port_scanner import scan_port, open_ports, show_port_chart
+from systems.email_checker import check_email_breach
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear') # Clear terminal screen
@@ -62,3 +62,6 @@ def main():
             
 if __name__ == "__main__":
     main()
+
+# to test you can use this scanme.nmap.org and 127.0.0.1 target for port scanning 
+# and your own email for breach checking 
