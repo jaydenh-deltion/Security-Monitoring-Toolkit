@@ -25,6 +25,6 @@ A modular Python-based cybersecurity toolkit designed for network diagnostics an
 PORT_SCANNER/
 ├── main.py                     # Central dashboard and menu logic
 ├── README.md                   # Project documentation
-└── port_and_email_checker/     # Core engine package
+└── systems                     # Core engine package
     ├── port_scanner.py         # Port scanning and visualization logic
     └── email_checker.py        # Breach detection logic via XposedOrNot API
