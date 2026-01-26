@@ -1,6 +1,7 @@
 import psutil
 import platform
 import time
+import matplotlib.pyplot as plt 
 
 def get_system_health():
     print("\n[*] Gathering system health information...\n")
@@ -29,5 +30,23 @@ def get_system_health():
 
     if disk.percent > 90:
         print(" [!] Warning: High disk usage detected!")
+
+    else:
+        print("\n [+] System health is within normal parameters.")
+
+    # Visual Report
+
+    labels = ['CPU Usage', 'Memory Usage', 'Disk Usage']
+    sizes = [cpu_usage, memory.percent, disk.percent]
+    colors = ['#ff9999','#66b3ff','#99ff99']
+    explode = (0.1, 0.1, 0.1)
+    plt.figure(figsize=(8, 6))
+    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=colors, explode=explode)
+    plt.title('System Health Overview')
+    print("[*] Dashboard: Generating system health visual report...")
+    plt.show()
+if __name__ == "__main__":
+    get_system_health()
+    
 
     
