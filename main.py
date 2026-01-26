@@ -6,6 +6,7 @@ from systems.port_scanner import scan_port, open_ports, show_port_chart
 from systems.email_checker import check_email_breach
 from systems.system_health import get_system_health
 
+
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear') # Clear terminal screen
 
