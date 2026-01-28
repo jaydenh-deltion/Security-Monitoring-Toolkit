@@ -32,3 +32,6 @@ PORT_SCANNER/
     ├── system_health.py        # Real-time hardware monitoring logic
     ├── breach_checker.txt      # (Log/Data file)
     └── port_scanner.txt        # (Log/Data file)
+
+
+Install this to use it: pip install requests matplotlib psutil
