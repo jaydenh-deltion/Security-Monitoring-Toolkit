@@ -6,7 +6,7 @@ from systems.port_scanner import scan_port, open_ports, show_port_chart
 from systems.email_checker import check_email_breach
 from systems.system_health import get_system_health
 from systems.file_integrity import monitor_file_integrity
-from systems.password_gen import generate_password
+from systems.password_gen import run_password_tool 
 
 
 def clear_screen():
@@ -73,7 +73,7 @@ def main():
             input("\n Press Enter to return to the menu...")
 
         elif choice == '6':
-            generate_password()
+            run_password_tool()
             input("\n Press Enter to return to the menu...")
 
         elif choice == '7':
