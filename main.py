@@ -5,6 +5,7 @@ import threading
 from systems.port_scanner import scan_port, open_ports, show_port_chart
 from systems.email_checker import check_email_breach
 from systems.system_health import get_system_health
+from systems.file_integrity import monitor_file_integrity
 
 
 def clear_screen():
@@ -21,10 +22,11 @@ def main():
         print(" [2] Data Integrity: Breach Checker (XposedOrNot)")
         print(" [3] System Information")
         print(" [4] System Health Check")
-        print(" [5] Exit")
+        print(" [5] Data Integrity: File Hash Monitor")
+        print(" [6] Exit")
         print("="*45)
 
-        choice = input("Select an option (1-5): ")
+        choice = input("Select an option (1-6): ")
 
         if choice == '1':
             target = input("\n Enter target IP address:")
@@ -62,8 +64,14 @@ def main():
         elif choice == '4':
             get_system_health()
             input("\n Press Enter to return to the menu...")
-        
+
         elif choice == '5':
+            filepath = input("\n Enter the file path to monitor:")
+            monitor_file_integrity(filepath)
+            input("\n Press Enter to return to the menu...")
+
+        
+        elif choice == '6':
             print("\n Exiting the program. Goodbye!")
             break
             
