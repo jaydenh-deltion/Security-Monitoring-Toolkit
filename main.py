@@ -80,3 +80,5 @@ if __name__ == "__main__":
 
 # to test you can use the port scanner use scanme.nmap.org and 127.0.0.1 target for port scanning 
 # and your own email for breach checking 
+
+# for file integrity you can use any file on your system to monitor its hash or use this: systems/secret_data.txt

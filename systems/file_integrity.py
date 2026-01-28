@@ -5,7 +5,7 @@ def calculate_hash(filepath):
     sha256_hash = hashlib.sha256()
     try:
         with open(filepath, "rb") as f:
-            for byte_block in iter(lambda: f.read(4096), b""):
+            for byte_block in iter(lambda: f.read(4096), b""): # Read file in 4KB chunks to ensure memory efficiency
                 sha256_hash.update(byte_block)
         return sha256_hash.hexdigest()
     except FileNotFoundError:
