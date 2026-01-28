@@ -70,5 +70,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-# to test you can use this scanme.nmap.org and 127.0.0.1 target for port scanning 
+# to test you can use the port scanner use scanme.nmap.org and 127.0.0.1 target for port scanning 
 # and your own email for breach checking 

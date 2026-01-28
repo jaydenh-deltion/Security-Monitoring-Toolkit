@@ -1,30 +1,34 @@
-# Sentinel Security Dashboard 🛡️
+# Sentinel Security & Monitoring Toolkit 🛡️
 
-A modular Python-based cybersecurity toolkit designed for network diagnostics and data integrity analysis. This project was developed as part of my portfolio for **Deltion College** and aimed towards a security internship
+A modular Python-based cybersecurity and system diagnostics toolkit. This project was developed as part of my portfolio for **Deltion College** and is designed to demonstrate core competencies in network programming, API integration, and real-time data visualization for a security internship.
 
 ## 🚀 Features
 
-- **Multi-threaded Port Scanner**: Rapidly scans TCP ports using Python's `socket` and `threading` libraries to identify potential entry points.
-- **Data Breach Checker**: Integrated with the **XposedOrNot API** to check if email addresses have been compromised in known data breaches.
-- **Data Visualization**: Generates real-time visual reports using **Matplotlib** to provide clear security insights.
-- **Modular Architecture**: Clean code structure with separated logic for network scanning and data integrity checks.
-
-
+- **Multi-threaded Port Scanner**: Rapidly probes TCP ports using Python's `socket` and `threading` libraries to identify exposed services.
+- **Data Breach Checker**: Leverages the **XposedOrNot API** to verify if credentials have been compromised in historical data leaks.
+- **Live System Health Monitor**: A real-time dashboard that tracks CPU, RAM, Disk usage, and Network I/O using `psutil`.
+- **Dynamic Data Visualization**: Generates interactive bar charts and pie charts using **Matplotlib** to translate raw data into actionable security insights.
+- **Modular Architecture**: Clean, package-based structure for high maintainability and scalability.
 
 ## 🛠️ Technical Stack
 
 - **Language:** Python 3.x
-- **Network:** `socket`, `threading`
-- **Data:** `requests` (API interaction), `json`
-- **Visualization:** `matplotlib`
-- **API Provider:** XposedOrNot (V1 API)
+- **System & Network:** `socket`, `threading`, `psutil`
+- **Data & API:** `requests` (REST API), `json`
+- **Visualization:** `matplotlib` (Live interactive mode)
 
 ## 📂 Project Structure
 
-```text
+Based on the map structure in VS Code:
+
+
 PORT_SCANNER/
 ├── main.py                     # Central dashboard and menu logic
 ├── README.md                   # Project documentation
-└── systems                     # Core engine package
+├── .gitattributes              # Git configuration
+└── systems/                    # Core engine package
+    ├── email_checker.py        # Breach detection logic via XposedOrNot API
     ├── port_scanner.py         # Port scanning and visualization logic
-    └── email_checker.py        # Breach detection logic via XposedOrNot API
+    ├── system_health.py        # Real-time hardware monitoring logic
+    ├── breach_checker.txt      # (Log/Data file)
+    └── port_scanner.txt        # (Log/Data file)
