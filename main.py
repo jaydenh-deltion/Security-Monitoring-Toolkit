@@ -73,9 +73,7 @@ def main():
             input("\n Press Enter to return to the menu...")
 
         elif choice == '6':
-            length = int(input("\n Enter desired password length: "))
-            password = generate_password(length)
-            print(f"\n Generated Password: {password}")
+            generate_password()
             input("\n Press Enter to return to the menu...")
 
         elif choice == '7':

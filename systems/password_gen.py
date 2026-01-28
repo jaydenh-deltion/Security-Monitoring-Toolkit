@@ -19,6 +19,4 @@ else:
 print(generate_password(length)) # print wachtwoord in de terminal 
 
 if __name__ == "__main__":
-    length = int(input("Enter desired password length (e.g., 12): "))
-    password = generate_password(length)
-    print(f"\n Generated Password: {password}")
+    generate_password()
