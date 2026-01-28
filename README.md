@@ -1,4 +1,4 @@
-Sentinel Security & Monitoring Toolkit 🛡️
+# Sentinel Security & Monitoring Toolkit 🛡️
 A modular Python-based cybersecurity and system diagnostics toolkit. This project was developed as part of my portfolio for Deltion College and is designed to demonstrate core competencies in network programming, API integration, data integrity, and defensive security.
 
 🚀 Features
