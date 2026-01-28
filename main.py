@@ -6,6 +6,7 @@ from systems.port_scanner import scan_port, open_ports, show_port_chart
 from systems.email_checker import check_email_breach
 from systems.system_health import get_system_health
 from systems.file_integrity import monitor_file_integrity
+from systems.password_gen import generate_password
 
 
 def clear_screen():
@@ -23,10 +24,11 @@ def main():
         print(" [3] System Information")
         print(" [4] System Health Check")
         print(" [5] Data Integrity: File Hash Monitor")
-        print(" [6] Exit")
+        print(" [6] Password Generator")
+        print(" [7] Exit")
         print("="*45)
 
-        choice = input("Select an option (1-6): ")
+        choice = input("Select an option (1-7): ")
 
         if choice == '1':
             target = input("\n Enter target IP address:")
@@ -70,8 +72,13 @@ def main():
             monitor_file_integrity(filepath)
             input("\n Press Enter to return to the menu...")
 
-        
         elif choice == '6':
+            length = int(input("\n Enter desired password length (e.g., 12): "))
+            password = generate_password(length)
+            print(f"\n Generated Password: {password}")
+            input("\n Press Enter to return to the menu...")
+
+        elif choice == '7':
             print("\n Exiting the program. Goodbye!")
             break
             
