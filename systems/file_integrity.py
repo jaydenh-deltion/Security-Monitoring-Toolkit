@@ -1,5 +1,5 @@
-import hashlib
-import os
+import hashlib # Import hashlib for hashing functions
+import os # Import os for file path operations
 
 def calculate_hash(filepath):
     sha256_hash = hashlib.sha256()
